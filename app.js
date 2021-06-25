@@ -12,8 +12,24 @@ app.set('view engine', 'ejs')
 // app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static('public'))
 
+// Routes
+// Landing page Route
 app.get('/', (req, res)=>{
+    res.render('home')
+})
+// Home page route
+app.get('/home', (req, res)=>{
     res.render("index")
+})
+
+// transaction page route
+app.get('/transaction', (req, res)=>{
+    res.render('transaction')      
+})
+
+// Login and sign up
+app.get('/login', (req, res)=>{
+    res.render('login')
 })
 
 
